@@ -6,6 +6,7 @@ interface ButtonItem {
   key: string;
   label: string;
   icon: React.ReactNode;
+  bg: string
 }
 
 interface SlideUpPanelProps {
@@ -31,7 +32,7 @@ export const SlideUpPanel = ({ buttons, setActiveSection }: SlideUpPanelProps) =
         initial={{ y: "100%" }}
         animate={{ y: isOpen ? "0%" : "100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="fixed bottom-0 left-0 w-full h-2/3 bg-gray-900 rounded-t-2xl p-4 sm:hidden z-50 overflow-y-auto shadow-xl"
+        className="fixed bottom-0 left-0 w-full  bg-gray-900 rounded-t-2xl p-4 sm:hidden z-50 overflow-y-auto shadow-xl"
       >
         <div className="flex justify-between items-center mb-4">
           <span className="text-lg font-bold text-white">Navigation</span>
@@ -48,7 +49,7 @@ export const SlideUpPanel = ({ buttons, setActiveSection }: SlideUpPanelProps) =
                 setActiveSection(button.key);
                 setIsOpen(false);
               }}
-              className="flex items-center gap-3 p-3 rounded-lg text-white text-left bg-gray-800/50 hover:bg-blue-600 hover:scale-[1.02] transition-all duration-200"
+              className={`flex items-center gap-3 p-3 rounded-lg text-white text-left bg-${button.bg} hover:scale-[1.02] transition-all duration-200`}
             >
               <span className="text-xl">{button.icon}</span>
               <span className="font-medium">{button.label}</span>
