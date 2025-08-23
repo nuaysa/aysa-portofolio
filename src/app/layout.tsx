@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Poppins, Montserrat } from "next/font/google";
 import "./globals.css";
 
@@ -24,8 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`${poppins.variable} ${montserrat.variable} antialiased`}>
         {children}
-
-        {/* Statcounter Script */}
+        <GoogleAnalytics gaId="G-57B0WG2648" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

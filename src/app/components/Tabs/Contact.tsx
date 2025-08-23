@@ -53,9 +53,7 @@ const contactItems = [
 function Contact() {
   return (
     <div className="relative lg:p-6 max-w-md mx-auto">
-      {/* Close button */}
 
-      {/* Header */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -65,7 +63,6 @@ function Contact() {
         Let&apos;s Connect!
       </motion.h2>
 
-      {/* Contact items */}
       <div className="space-y-4">
         {contactItems.map((item, index) => (
           <motion.a
@@ -87,7 +84,6 @@ function Contact() {
         ))}
       </div>
 
-      {/* Footer with close button */}
     </div>
   );
 }

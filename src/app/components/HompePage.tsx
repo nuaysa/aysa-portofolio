@@ -7,13 +7,13 @@ import About from "./Tabs/About";
 import Education from "./Tabs/Education";
 import Contact from "./Tabs/Contact";
 import Project from "./Tabs/Projects";
+import { SlideUpPanel } from "./SlideUpPanel";
+import { sendGAEvent } from "@/libs/ga";
 
 const buttonVariants = {
   hover: { scale: 1.03, y: -3 },
   tap: { scale: 0.98 },
 };
-
-import { SlideUpPanel } from "./SlideUpPanel"; // pastikan path sesuai
 
 function HomePageTabs() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -50,17 +50,18 @@ function HomePageTabs() {
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen p-4 md:p-6 gap-4 md:gap-8 bg-gray-900 text-white">
-      {/* Konten */}
       <motion.div className="flex-1 p-6 bg-gray-800 rounded-xl overflow-y-auto hide-scrollbar" key={activeSection || "default"} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }}>
         {renderSection()}
       </motion.div>
 
-      {/* Tombol kanan - hanya tampil di desktop */}
       <motion.div className="hidden sm:flex flex-col gap-4 sticky top-6 h-fit" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
         {buttons.map((button, index) => (
           <motion.button
             key={button.key}
-            onClick={() => setActiveSection(button.key)}
+            onClick={() => {
+              sendGAEvent(button.label);
+              setActiveSection(button.key);
+            }}
             className={`flex items-center justify-start gap-3 px-6 py-4 rounded-xl font-medium text-white shadow-lg ${button.bg} hover:shadow-xl transition-all backdrop-blur-sm bg-opacity-90 ${
               activeSection === button.key ? "ring-2 ring-white" : ""
             }`}
@@ -77,7 +78,6 @@ function HomePageTabs() {
         ))}
       </motion.div>
 
-      {/* Panel mobile */}
       <SlideUpPanel buttons={buttons} setActiveSection={setActiveSection} />
     </div>
   );

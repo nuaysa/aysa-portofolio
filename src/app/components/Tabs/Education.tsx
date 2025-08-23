@@ -48,7 +48,6 @@ function Education() {
 
   return (
     <div className="relative text-gray-300 lg:p-6 max-w-2xl mx-auto">
-      {/* Title */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -58,7 +57,6 @@ function Education() {
         Education & Certification
       </motion.h2>
 
-      {/* Tabs */}
       <motion.div className="flex space-x-1 bg-gray-800 p-1 rounded-lg mb-6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
         {Object.keys(eduCategories).map((category) => (
           <motion.button
@@ -73,7 +71,6 @@ function Education() {
         ))}
       </motion.div>
 
-      {/* List Items */}
       <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-4">
         {eduCategories[activeTab].map((item) => (
           <motion.div key={item.title} variants={itemVariants} className="flex items-start space-x-4 p-4 rounded-lg bg-gray-800 hover:bg-gray-700 border border-gray-700 transition-all" whileHover={{ y: -3 }}>

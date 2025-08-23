@@ -61,9 +61,6 @@ function About() {
 
   return (
     <div className="relative text-gray-300 lg:p-6 max-w-2xl mx-auto">
-      {/* Close Button */}
-
-      {/* Title */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -74,7 +71,6 @@ function About() {
       </motion.h2>
 
       <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-5">
-        {/* Personal Info */}
         <motion.div variants={itemVariants}>
           <p className="leading-relaxed text-white">Allysa Nouran Naveeda</p>
           <p className="text-gray-400">Fullstack Web Developer | Bandung, West Java, Indonesia</p>
@@ -93,7 +89,6 @@ function About() {
           </div>
         </motion.div>
 
-        {/* Bio Sections */}
         <motion.p variants={itemVariants} className="leading-relaxed">
           Fullstack Web Developer with strong hands-on experience in building scalable web applications using ReactJS, Next.js, Node.js, and PostgreSQL. Graduated from Purwadhika Digital Technology School&apos;s Fullstack Web Development
           program, where I developed full-featured applications to improve real-world business processes.
@@ -107,11 +102,10 @@ function About() {
           I am passionate about developing impactful digital solutions that enhance user experience and system performance. Eager to contribute to dynamic teams and grow in a fast-paced tech environment.
         </motion.p>
 
-        {/* Skills Section */}
+   
         <motion.div variants={itemVariants} className="mt-8">
           <h3 className="text-xl font-semibold mb-4 text-white">Skills</h3>
 
-          {/* Tabs */}
           <motion.div className="flex overflow-x-auto sm:overflow-visible space-x-2 bg-gray-800 p-1 rounded-lg" whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 20 }} transition={{ duration: 0.4 }}>
             {Object.keys(skillCategories).map((category) => (
               <motion.button

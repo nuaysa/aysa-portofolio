@@ -88,12 +88,8 @@ export default function Project() {
           </h2>
 
           <div className="relative">
-            {/* Timeline */}
-
             {experiences.map((exp, index) => (
               <motion.div key={index} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.1 }} className="relative  pb-8">
-                {/* Timeline dot */}
-
                 <div className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all">
                   <div className="flex justify-between items-start">
                     <div>

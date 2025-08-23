@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FiMenu } from "react-icons/fi"; // icon menu
+import { FiMenu } from "react-icons/fi"; 
+import { sendGAEvent } from "@/libs/ga";
 
 interface ButtonItem {
   key: string;
@@ -19,7 +20,6 @@ export const SlideUpPanel = ({ buttons, setActiveSection }: SlideUpPanelProps) =
 
   return (
     <>
-      {/* Trigger button */}
       <button
         onClick={() => setIsOpen(true)}
         className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-3 rounded-full shadow-lg sm:hidden z-50 hover:scale-105 hover:shadow-blue-400/50 transition-all duration-200"
@@ -27,7 +27,6 @@ export const SlideUpPanel = ({ buttons, setActiveSection }: SlideUpPanelProps) =
         <FiMenu size={22} />
       </button>
 
-      {/* Slide-up panel */}
       <motion.div
         initial={{ y: "100%" }}
         animate={{ y: isOpen ? "0%" : "100%" }}
@@ -46,10 +45,11 @@ export const SlideUpPanel = ({ buttons, setActiveSection }: SlideUpPanelProps) =
             <button
               key={button.key}
               onClick={() => {
+                sendGAEvent(button.label)
                 setActiveSection(button.key);
                 setIsOpen(false);
               }}
-              className={`flex items-center gap-3 p-3 rounded-lg text-white text-left bg-${button.bg} hover:scale-[1.02] transition-all duration-200`}
+              className={`flex items-center gap-3 p-3 rounded-lg text-white text-left ${button.bg} hover:scale-[1.02] transition-all duration-200`}
             >
               <span className="text-xl">{button.icon}</span>
               <span className="font-medium">{button.label}</span>
