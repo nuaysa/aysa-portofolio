@@ -75,12 +75,12 @@ function About() {
           <p className="leading-relaxed text-white">Allysa Nouran Naveeda</p>
           <p className="text-gray-400">Fullstack Web Developer | Bandung, West Java, Indonesia</p>
           <div className="flex flex-wrap gap-2 mt-2">
-            <Link href="https://wa.me/6285220572058" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">
-              0852-2057-2058
+            <Link href="https://github.com/nuaysa/" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">
+              github.com/nuaysa
             </Link>
             <span className="text-gray-500">|</span>
-            <Link href="mailto:aysa@bim.web.id" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">
-              aysa@bim.web.id
+            <Link href="mailto:nuaysa@gmail.com" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">
+              nuaysa@gmail.com
             </Link>
             <span className="text-gray-500">|</span>
             <Link href="http://linkedin.com/in/nuaysa" className="text-blue-400 hover:underline hover:text-blue-300 transition-colors">
@@ -102,7 +102,6 @@ function About() {
           I am passionate about developing impactful digital solutions that enhance user experience and system performance. Eager to contribute to dynamic teams and grow in a fast-paced tech environment.
         </motion.p>
 
-   
         <motion.div variants={itemVariants} className="mt-8">
           <h3 className="text-xl font-semibold mb-4 text-white">Skills</h3>
 
@@ -119,8 +118,6 @@ function About() {
               </motion.button>
             ))}
           </motion.div>
-
-          {/* Skill Cards */}
 
           <motion.div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 mt-4" variants={containerVariants}>
             {skillCategories[activeTab].map((skill) => (

@@ -1,22 +1,13 @@
 import React from "react";
-import { FaWhatsapp, FaEnvelope, FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
+import {  FaEnvelope, FaLinkedin, FaInstagram, FaGithub, FaGit } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const contactItems = [
   {
-    platform: "WhatsApp",
-    icon: <FaWhatsapp className="text-2xl" />,
-    link: "https://wa.me/6285220572058",
-    text: "0852-2057-2058",
-    color: "hover:text-green-400",
-    bgColor: "bg-green-500",
-    delay: 0.1,
-  },
-  {
     platform: "Email",
     icon: <FaEnvelope className="text-2xl" />,
-    link: "mailto:aysa@bim.web.id",
-    text: "aysa@bim.web.id",
+    link: "mailto:nuaysa@gmail.com",
+    text: "nuaysa@gmail.com",
     color: "hover:text-red-400",
     bgColor: "bg-red-500",
     delay: 0.2,

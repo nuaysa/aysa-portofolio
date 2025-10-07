@@ -19,11 +19,11 @@ function HomePageTabs() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
   const buttons = [
-    { label: "Home", key: "home", icon: <FaHome />, bg: "bg-gradient-to-r from-blue-400 to-purple-500" },
-    { label: "About Me", key: "about", icon: <FaUser />, bg: "bg-gradient-to-r from-blue-400 to-blue-500" },
-    { label: "Education & Certification", key: "education", icon: <FaUserGraduate />, bg: "bg-gradient-to-r from-purple-400 to-purple-500" },
-    { label: "Projects & Experience", key: "projects", icon: <FaLaptopCode />, bg: "bg-gradient-to-r from-green-400 to-green-500" },
-    { label: "Contact", key: "contact", icon: <FaEnvelope />, bg: "bg-gradient-to-r from-pink-400 to-pink-500" },
+    { label: "Home", key: "home", icon: <FaHome />, bg: "bg-gradient-to-r cursor-pointer from-blue-400 to-purple-500" },
+    { label: "About Me", key: "about", icon: <FaUser />, bg: "bg-gradient-to-r cursor-pointer from-blue-400 to-blue-500" },
+    { label: "Education & Certification", key: "education", icon: <FaUserGraduate />, bg: "bg-gradient-to-r cursor-pointer from-purple-400 to-purple-500" },
+    { label: "Projects & Experience", key: "projects", icon: <FaLaptopCode />, bg: "bg-gradient-to-r cursor-pointer from-green-400 to-green-500" },
+    { label: "Contact", key: "contact", icon: <FaEnvelope />, bg: "bg-gradient-to-r cursor-pointer from-pink-400 to-pink-500" },
   ];
 
   const renderSection = () => {
