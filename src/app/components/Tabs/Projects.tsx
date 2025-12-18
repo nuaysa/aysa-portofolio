@@ -18,6 +18,17 @@ const projects = [
     ],
   },
   {
+    title: "Ajib English Course Website",
+    image: "/Ajib_course.png",
+    description:
+      "Designed and developed a responsive landing page for Ajib English Course featuring key sections: course highlights, class packages, testimonials, teacher profiles, and contact information. Implemented modern UI/UX design with smooth animations and intuitive navigation to effectively showcase the course offerings and build trust with potential students. Built with performance-optimized Next.js and TypeScript.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    links: [
+      { url: "https://ajib-course.vercel.app/", icon: <FaExternalLinkAlt />, label: "Visit Site" },
+      { url: "https://github.com/nuaysa/ajib-course", icon: <FaGithub />, label: "View Code" },
+    ],
+  },
+  {
     title: "Jabal Nur Tasikmalaya Tourist Spot Website",
     image: "/Jabal_nur.png",
     description:
@@ -42,17 +53,26 @@ const projects = [
 ];
 const experiences = [
   {
-    position: "Front-End Developer Intern",
-    company: "Hepy Tech",
-    period: "May – August 2025",
+    position: "Junior Front-End Developer",
+    company: "HepyTech",
+    period: "August 2025 – Present",
     icon: <FaBuilding className="text-blue-400" />,
     highlights: [
       "Collaborated on user-facing platform using React and Next.js",
       "Implemented global state management using Zustand",
       "Applied MVVM architectural pattern",
       "Created reusable components for better UI performance",
-      "Participated in code reviews and agile development",
+      "Participated with agile development",
+      "Participated in real project meetings and code reviews",
     ],
+    tech: [<SiReact key="react" className="text-blue-500" />, <SiNextdotjs key="next" className="text-white" />],
+  },
+  {
+    position: "Front-End Developer Intern",
+    company: "HepyTech",
+    period: "May – August 2025",
+    icon: <FaBuilding className="text-blue-400" />,
+    highlights: ["Collaborated on user-facing platform using React and Next.js", "Implemented global state management using Zustand", "Applied MVVM architectural pattern", "Created reusable components for better UI performance"],
     tech: [<SiReact key="react" className="text-blue-500" />, <SiNextdotjs key="next" className="text-white" />],
   },
 ];
