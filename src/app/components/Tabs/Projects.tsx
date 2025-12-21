@@ -17,6 +17,24 @@ const projects = [
       { url: "https://github.com/NaufalNurAdrian/backend-launderly", icon: <FaGithub />, label: "View BE Code" },
     ],
   },
+{
+  "title": "El-Rouz Catering Website",
+  "image": "/El-rouz.png", 
+  "description": "Designed and developed a fully-responsive website for El-Rouz Catering, a Middle Eastern catering business specializing in authentic Saudi cuisine. The website features key sections: hero banner with gradient overlay, menu showcase with interactive cards, detailed Aqiqah (Islamic tradition) packages, customer testimonials, and integrated WhatsApp ordering system. Implemented modern UI/UX design with smooth animations, mobile-first responsive layout, and intuitive navigation to effectively showcase authentic Middle Eastern dishes and streamline customer ordering experience. Built with performance-optimized Next.js and TypeScript.",
+  "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Swiper.js", "Next.js Image Optimization"],
+  "links": [
+    { 
+      "url": "https://el-rouz-catering.vercel.app/", 
+      "icon": <FaExternalLinkAlt />, 
+      "label": "Visit Site" 
+    },
+    { 
+      "url": "https://github.com/nusycs/el-rouz-git", 
+      "icon": <FaGithub />, 
+      "label": "View Code" 
+    },
+  ],
+},
   {
     title: "Ajib English Course Website",
     image: "/Ajib_course.png",
